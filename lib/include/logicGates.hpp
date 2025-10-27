@@ -1,9 +1,14 @@
 #ifndef LOGIC_GATES_HPP
 #define LOGIC_GATES_HPP
+#include <initializer_list>
 
 namespace LogicGates
 {
-    bool And(int a, int b);
+    bool OR(bool a, bool b);
+    bool OR(std::initializer_list<bool> inputs );
+    bool AND(bool a, bool b);
+    bool AND(std::initializer_list<bool> inputs);
+    bool NOT(bool a);
 };
 
 #endif
