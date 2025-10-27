@@ -35,4 +35,17 @@ namespace LogicGates
 
         return res;
     }
+
+    bool NOR(bool a,bool b)
+    {
+        return !(a || b);
+    }
+
+    bool NOR(std::initializer_list<bool> inputs)
+    {
+        for(auto inp : inputs)
+            if(inp) return false;
+
+        return true;
+    }
 };
