@@ -26,4 +26,15 @@ namespace LogicGates
     {
         return (a && !b) || (!a && b);     
     }
+
+    bool XOR(std::initializer_list<bool> inputs)
+    {
+        auto it{inputs.begin()};
+        bool res{*it};
+        ++it;
+        for(; it!=inputs.end();it++)
+            res = XOR(res, *it);
+
+        return res;
+    }
 };

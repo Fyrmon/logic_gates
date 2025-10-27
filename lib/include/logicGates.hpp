@@ -10,6 +10,7 @@ namespace LogicGates
     bool AND(std::initializer_list<bool> inputs);
     bool NOT(bool a);
     bool XOR(bool a,bool b);
+    bool XOR(std::initializer_list<bool> inputs);
 };
 
 #endif
