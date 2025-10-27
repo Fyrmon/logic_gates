@@ -2,8 +2,21 @@
 
 namespace LogicGates
 {
-    bool And(int a, int b)
+    bool OR(bool a, bool b) { return a || b; }
+    bool OR(std::initializer_list<bool> inputs)
     {
-        return true; // for now...
+        for(auto inp : inputs)
+            if(inp) return true;
+
+        return false;
+    }
+
+    bool AND(bool a, bool b){ return a && b; }
+    bool AND(std::initializer_list<bool> inputs)
+    {
+        for(auto inp: inputs)
+            if(!inp) return false;
+
+        return true;
     }
 };

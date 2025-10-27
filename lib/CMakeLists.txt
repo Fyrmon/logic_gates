@@ -4,4 +4,4 @@ set(SOURCES
 
 add_library(lg_lib ${SOURCES})
 
-target_include_directories(lg_lib PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(lg_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
