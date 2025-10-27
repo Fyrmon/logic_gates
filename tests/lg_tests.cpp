@@ -20,3 +20,9 @@ TEST(LG_Test, LG_AND)
     EXPECT_EQ(LogicGates::AND({1,1,1,1,1}),true);
     EXPECT_EQ(LogicGates::AND({1,1,1,1,0}),false);
 }
+
+TEST(LG_TEST, LG_NOT)
+{
+    EXPECT_EQ(LogicGates::NOT(true),false);
+    EXPECT_EQ(LogicGates::NOT(false),true);
+}

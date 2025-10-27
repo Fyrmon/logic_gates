@@ -8,6 +8,7 @@ namespace LogicGates
     bool OR(std::initializer_list<bool> inputs );
     bool AND(bool a, bool b);
     bool AND(std::initializer_list<bool> inputs);
+    bool NOT(bool a);
 };
 
 #endif

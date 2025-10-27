@@ -19,4 +19,6 @@ namespace LogicGates
 
         return true;
     }
+
+    bool NOT(bool a) { return !a;}
 };
