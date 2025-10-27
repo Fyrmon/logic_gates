@@ -39,4 +39,6 @@ TEST(LG_TEST, LG_XOR)
     EXPECT_EQ(LogicGates::XOR({1,0,0,0,0,1}),false);
     EXPECT_EQ(LogicGates::XOR({1,0,0,0,1,0,0,1}),true);
     EXPECT_EQ(LogicGates::XOR({1,0,1,0,1,0,1,1}),true);
+    EXPECT_EQ(LogicGates::XOR({1,0}),true);
+    EXPECT_EQ(LogicGates::XOR({0}), false);
 }
