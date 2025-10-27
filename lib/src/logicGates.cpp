@@ -24,16 +24,14 @@ namespace LogicGates
 
     bool XOR(bool a,bool b)
     {
-        return (a && !b) || (!a && b);     
+        return a^b;    
     }
 
     bool XOR(std::initializer_list<bool> inputs)
     {
-        auto it{inputs.begin()};
-        bool res{*it};
-        ++it;
-        for(; it!=inputs.end();it++)
-            res = XOR(res, *it);
+        bool res{false};
+        for(auto inp : inputs)
+            res^=inp;
 
         return res;
     }
