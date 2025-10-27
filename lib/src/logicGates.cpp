@@ -21,4 +21,9 @@ namespace LogicGates
     }
 
     bool NOT(bool a) { return !a;}
+
+    bool XOR(bool a,bool b)
+    {
+        return (a && !b) || (!a && b);     
+    }
 };
