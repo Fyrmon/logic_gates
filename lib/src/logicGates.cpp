@@ -21,4 +21,18 @@ namespace LogicGates
     }
 
     bool NOT(bool a) { return !a;}
+
+    bool XOR(bool a,bool b)
+    {
+        return a^b;    
+    }
+
+    bool XOR(std::initializer_list<bool> inputs)
+    {
+        bool res{false};
+        for(auto inp : inputs)
+            res^=inp;
+
+        return res;
+    }
 };
