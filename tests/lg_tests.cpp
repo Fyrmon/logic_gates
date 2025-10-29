@@ -1,14 +1,11 @@
 #include <gtest/gtest.h>
 #include "logicGates.hpp"
 
-TEST(LG_Test, LG_OR)
-{
-    EXPECT_TRUE(LogicGates::OR(1,1));
-    EXPECT_TRUE(LogicGates::OR(0,1));
-    EXPECT_FALSE(LogicGates::OR(0,0));
 
-    EXPECT_TRUE(LogicGates::OR({0,0,0,0,0,1}));
-    EXPECT_FALSE(LogicGates::OR({0,0,0,0}));
+TEST(LG_TEST, LG_NOT)
+{
+    EXPECT_FALSE(LogicGates::NOT(true));
+    EXPECT_TRUE(LogicGates::NOT(false));
 }
 
 TEST(LG_Test, LG_AND)
@@ -21,10 +18,14 @@ TEST(LG_Test, LG_AND)
     EXPECT_FALSE(LogicGates::AND({1,1,1,1,0}));
 }
 
-TEST(LG_TEST, LG_NOT)
+TEST(LG_Test, LG_OR)
 {
-    EXPECT_FALSE(LogicGates::NOT(true));
-    EXPECT_TRUE(LogicGates::NOT(false));
+    EXPECT_TRUE(LogicGates::OR(1,1));
+    EXPECT_TRUE(LogicGates::OR(0,1));
+    EXPECT_FALSE(LogicGates::OR(0,0));
+
+    EXPECT_TRUE(LogicGates::OR({0,0,0,0,0,1}));
+    EXPECT_FALSE(LogicGates::OR({0,0,0,0}));
 }
 
 TEST(LG_TEST, LG_XOR)
