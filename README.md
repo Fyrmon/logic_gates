@@ -25,7 +25,9 @@ My mission is to "recreate" the full palette of logic gates using only this sing
 
 This isn't a race for speed.I'm not chasing milliseconds or low power consumption. This project is dedicated to pure, unadulterated learning.
 
-    Clarity Over Speed: I intentionally reject the devilish sorcery of short-circuit evaluation. Every logical component is activated and examined, even when the outcome is obvious early on. The goal is to see the whole process, every time.
+    Clarity Over Speed: I intentionally reject the devilish sorcery of short-circuit evaluation.
+    Every logical component is activated and examined, even when the outcome is obvious early on.
+    The goal is to see the whole process, every time.
 
 ### 🛡️Final Warning
 
