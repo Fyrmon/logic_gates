@@ -2,6 +2,22 @@
 
 namespace LogicGates
 {
+    // The one to rule them all
+    bool NAND(bool a, bool b)
+    {
+        return !(a & b);
+    }
+
+    bool NOT(bool a)
+    { 
+        return NAND(a,a);
+    }
+
+    bool AND(bool a, bool b)
+    {
+        return NOT(NAND(a,b));
+    }
+
     bool OR(bool a, bool b) { return a || b; }
     bool OR(std::initializer_list<bool> inputs)
     {
@@ -11,16 +27,16 @@ namespace LogicGates
         return false;
     }
 
-    bool AND(bool a, bool b){ return a && b; }
     bool AND(std::initializer_list<bool> inputs)
     {
+        bool out{ true };
         for(auto inp: inputs)
-            if(!inp) return false;
+        {
+            out = AND(out,inp);
+        }
 
-        return true;
+        return out;
     }
-
-    bool NOT(bool a) { return !a;}
 
     bool XOR(bool a,bool b)
     {
