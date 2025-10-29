@@ -38,7 +38,7 @@ namespace LogicGates
     {
         bool out{ false };
         for(auto inp : inputs)
-            out = (out,inp);
+            out = OR(out,inp);
 
         return out;
     }
