@@ -18,6 +18,9 @@ namespace LogicGates
 
     bool NOR(bool a,bool b);
     bool NOR(std::initializer_list<bool> inputs);
+
+    bool XNOR(bool a,bool b);
+    bool XNOR(std::initializer_list<bool> inputs);
 };
 
 #endif

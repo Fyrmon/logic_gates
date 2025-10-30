@@ -62,3 +62,19 @@ TEST(LG_TEST, LG_NOR)
     EXPECT_TRUE(LogicGates::NOR({0,0}));
     EXPECT_FALSE(LogicGates::NOR({0,1}));
 }
+
+TEST(LG_TEST, LG_XNOR)
+{
+    EXPECT_TRUE(LogicGates::XNOR(0,0));
+    EXPECT_TRUE(LogicGates::XNOR(1,1));
+    EXPECT_FALSE(LogicGates::XNOR(1,0));
+    EXPECT_FALSE(LogicGates::XNOR(0,1));
+
+    EXPECT_TRUE(LogicGates::XNOR({0,0}));
+    EXPECT_TRUE(LogicGates::XNOR({1,1}));
+    EXPECT_FALSE(LogicGates::XNOR({1,1,1,1,1}));
+    EXPECT_FALSE(LogicGates::XNOR({0,1,0}));
+    EXPECT_TRUE(LogicGates::XNOR({0,1,0,1}));
+    EXPECT_FALSE(LogicGates::XNOR({0,0,0,0,0,0,1}));
+
+}

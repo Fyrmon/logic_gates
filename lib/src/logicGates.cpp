@@ -1,5 +1,8 @@
 #include "logicGates.hpp"
 
+
+#include <iostream>
+
 namespace LogicGates
 {
     // The one to rule them all
@@ -69,5 +72,15 @@ namespace LogicGates
             output = NOR(output,inp);
 
         return output;
+    }
+
+    bool XNOR(bool a,bool b)
+    {
+        return OR(AND(a,b),AND(NOT(a),NOT(b)));
+    }
+
+    bool XNOR(std::initializer_list<bool> inputs)
+    {
+        return !XOR(inputs);
     }
 };
