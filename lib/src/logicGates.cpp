@@ -59,14 +59,15 @@ namespace LogicGates
 
     bool NOR(bool a,bool b)
     {
-        return !(a || b);
+        return NOT(OR(a,b));
     }
 
     bool NOR(std::initializer_list<bool> inputs)
     {
+        bool output{ true };
         for(auto inp : inputs)
-            if(inp) return false;
+            output = NOR(output,inp);
 
-        return true;
+        return output;
     }
 };
