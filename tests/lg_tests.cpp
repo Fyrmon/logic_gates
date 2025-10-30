@@ -1,6 +1,10 @@
 #include <gtest/gtest.h>
 #include "logicGates.hpp"
 
+TEST(LG_TEST, LG_NAND)
+{
+    EXPECT_TRUE(LogicGates::NAND(0,0));
+}
 
 TEST(LG_TEST, LG_NOT)
 {
@@ -42,6 +46,7 @@ TEST(LG_TEST, LG_XOR)
     EXPECT_TRUE(LogicGates::XOR({1,0,1,0,1,0,1,1}));
     EXPECT_TRUE(LogicGates::XOR({1,0}));
     EXPECT_FALSE(LogicGates::XOR({0}));
+    EXPECT_FALSE(LogicGates::XOR({0,1,1}));
 }
 
 TEST(LG_TEST, LG_NOR)
