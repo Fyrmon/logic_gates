@@ -45,14 +45,14 @@ namespace LogicGates
 
     bool XOR(bool a,bool b)
     {
-        return a^b;    
+        return OR(AND(a,!b),AND(!a,b));  
     }
 
     bool XOR(std::initializer_list<bool> inputs)
     {
         bool res{false};
         for(auto inp : inputs)
-            res^=inp;
+            res = XOR(res,inp);
 
         return res;
     }
