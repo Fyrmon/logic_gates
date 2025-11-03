@@ -80,4 +80,9 @@ namespace LogicGates
     {
         return !XOR(inputs);
     }
+
+    bool INHIBIT(bool a, bool b)
+    {
+        return AND(a, NOT(b)); 
+    }
 };
