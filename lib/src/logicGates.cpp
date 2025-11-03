@@ -70,4 +70,14 @@ namespace LogicGates
 
         return output;
     }
+
+    bool XNOR(bool a,bool b)
+    {
+        return OR(AND(a,b),AND(NOT(a),NOT(b)));
+    }
+
+    bool XNOR(std::initializer_list<bool> inputs)
+    {
+        return !XOR(inputs);
+    }
 };
