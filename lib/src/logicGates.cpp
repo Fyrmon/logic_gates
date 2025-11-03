@@ -90,4 +90,9 @@ namespace LogicGates
     {
         return OR(NOT(a),b);
     }
+
+    bool NIMPLY(bool a,bool b)
+    {
+        return NOT(IMPLY(a,b));
+    }
 };

@@ -24,6 +24,7 @@ namespace LogicGates
 
     bool INHIBIT(bool a, bool b);
     bool IMPLY(bool a,bool b);
+    bool NIMPLY(bool a,bool b);
 };
 
 #endif
