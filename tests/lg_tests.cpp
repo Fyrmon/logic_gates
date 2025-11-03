@@ -93,3 +93,11 @@ TEST(LG_TEST, LG_IMPLY)
     EXPECT_FALSE(LogicGates::IMPLY(1,0));
     EXPECT_TRUE(LogicGates::IMPLY(1,1));
 }
+
+TEST(LG_TEST, LG_NIMPLY)
+{
+    EXPECT_FALSE(LogicGates::NIMPLY(0,0));
+    EXPECT_FALSE(LogicGates::NIMPLY(0,1));
+    EXPECT_TRUE(LogicGates::NIMPLY(1,0));
+    EXPECT_FALSE(LogicGates::NIMPLY(1,1));
+}
