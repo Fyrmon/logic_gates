@@ -76,5 +76,4 @@ TEST(LG_TEST, LG_XNOR)
     EXPECT_FALSE(LogicGates::XNOR({0,1,0}));
     EXPECT_TRUE(LogicGates::XNOR({0,1,0,1}));
     EXPECT_FALSE(LogicGates::XNOR({0,0,0,0,0,0,1}));
-
 }

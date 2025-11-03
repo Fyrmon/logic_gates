@@ -1,8 +1,5 @@
 #include "logicGates.hpp"
 
-
-#include <iostream>
-
 namespace LogicGates
 {
     // The one to rule them all
