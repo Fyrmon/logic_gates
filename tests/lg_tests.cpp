@@ -85,3 +85,11 @@ TEST(LG_TEST, LG_INHIBIT)
     EXPECT_FALSE(LogicGates::INHIBIT(0,1));
     EXPECT_FALSE(LogicGates::INHIBIT(1,1));
 }
+
+TEST(LG_TEST, LG_IMPLY)
+{
+    EXPECT_TRUE(LogicGates::IMPLY(0,0));
+    EXPECT_TRUE(LogicGates::IMPLY(0,1));
+    EXPECT_FALSE(LogicGates::IMPLY(1,0));
+    EXPECT_TRUE(LogicGates::IMPLY(1,1));
+}

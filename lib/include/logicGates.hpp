@@ -23,6 +23,7 @@ namespace LogicGates
     bool XNOR(std::initializer_list<bool> inputs);
 
     bool INHIBIT(bool a, bool b);
+    bool IMPLY(bool a,bool b);
 };
 
 #endif

@@ -81,8 +81,13 @@ namespace LogicGates
         return !XOR(inputs);
     }
 
-    bool INHIBIT(bool a, bool b)
+    bool INHIBIT(bool a,bool b)
     {
         return AND(a, NOT(b)); 
+    }
+
+    bool IMPLY(bool a,bool b)
+    {
+        return OR(NOT(a),b);
     }
 };
